@@ -1,0 +1,17 @@
+AquaNet Teslim Notu
+===================
+
+Bu ZIP paketi, Derin Öğrenme final projesi için hazırlanmış teslim sürümüdür.
+
+Paket içeriği:
+- KSU JES formatında final makale PDF'i: docs/AQUANET_Proje_Makalesi.pdf
+- Ana proje notebook'u: notebooks/AquaNet_Main.ipynb (çıktıları dahil edilmemiştir. Çıktı bulunan versiyon;archive/AquaNet.ipynb  )
+- İşlenmiş veri tabloları: data/processed/
+- Deney metrikleri: outputs/metrics/
+- Makale ve deney görselleri: outputs/figures/
+- Etkileşimli harita çıktısı: outputs/maps/aquanet_interaktif_harita.html
+- Yardımcı Python kodları: src/ ve scripts/
+- Kurulum dosyası: requirements.txt
+
+Not:
+Ham uydu görüntüleri yüksek boyutlu olduğu için pakete eklenmemiştir. Notebook içinde Microsoft Planetary Computer ve NASA POWER üzerinden veri çekme adımları korunmuştur. İşlenmiş CSV/JSON sonuçları ve tüm nihai görseller teslim paketine dahil edilmiştir.

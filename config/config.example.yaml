@@ -1,0 +1,38 @@
+project:
+  name: AquaNet
+  author: Kamile Zehra ARSLAN
+  institution: Kahramanmaras Sutcu Imam University, Department of Computer Engineering
+  year: 2026
+
+data_sources:
+  satellite:
+    - Landsat 5/7/8/9 via Microsoft Planetary Computer
+    - Sentinel-2 via Microsoft Planetary Computer
+  climate:
+    - NASA POWER
+  labels:
+    - NDWI threshold-based water masks
+
+lakes:
+  tuz:
+    name: Tuz Golu
+    role: Saline and drought-sensitive lake; challenging segmentation case
+  burdur:
+    name: Burdur Golu
+    role: Long-term water loss and drought-risk case
+  beysehir:
+    name: Beysehir Golu
+    role: Large freshwater lake case
+  salda:
+    name: Salda Golu
+    role: Environmentally sensitive smaller-scale lake case
+
+model:
+  module_1: EfficientNet-B4 encoder + U-Net decoder
+  module_2: Cross-Attention feature importance analysis
+  module_3: BiLSTM drought scenario forecasting
+
+outputs:
+  metrics_dir: outputs/metrics
+  figures_dir: outputs/figures
+  maps_dir: outputs/maps

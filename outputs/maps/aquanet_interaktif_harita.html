@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b09bf2783e05b965bccb89b2cc274754 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+            top: 10px; left: 50px; width: 400px; height: 60px; 
+            background-color: white; border:2px solid grey; z-index:9999; 
+            font-size:14px; padding: 10px">
+<b>AquaNet: Türkiye İç Gölleri — 2050 RCP 8.5 Tahminleri</b><br>
+<span style="font-size:11px">Kırmızı: Kayıp | Yeşil: Artış</span>
+</div>
+    
+            <div class="folium-map" id="map_b09bf2783e05b965bccb89b2cc274754" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b09bf2783e05b965bccb89b2cc274754 = L.map(
+                "map_b09bf2783e05b965bccb89b2cc274754",
+                {
+                    center: [39.0, 35.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_439b477d34a5fda40bccbd8806c1d20c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_439b477d34a5fda40bccbd8806c1d20c.addTo(map_b09bf2783e05b965bccb89b2cc274754);
+        
+    
+            var circle_marker_6892320fe0cf428713503e5fa887c433 = L.circleMarker(
+                [38.725, 33.35],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_b09bf2783e05b965bccb89b2cc274754);
+        
+    
+        var popup_54f48105aef97ebc416cfd4e28d89b33 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_51f989f5914b153c60556b18db72037b = $(`<div id="html_51f989f5914b153c60556b18db72037b" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 220px;">         <h4 style="margin: 0; color: #2c3e50;">Tuz Gölü</h4>         <hr style="margin: 5px 0;">         <b>2024 Su Alanı:</b> 330.1 km²<br>         <b>2050 RCP 8.5:</b> 227.9 km²<br>         <b>Değişim:</b> <span style="color: red; font-weight: bold;">         -31.0%</span>     </div>     </div>`)[0];
+                popup_54f48105aef97ebc416cfd4e28d89b33.setContent(html_51f989f5914b153c60556b18db72037b);
+            
+        
+
+        circle_marker_6892320fe0cf428713503e5fa887c433.bindPopup(popup_54f48105aef97ebc416cfd4e28d89b33)
+        ;
+
+        
+    
+    
+            circle_marker_6892320fe0cf428713503e5fa887c433.bindTooltip(
+                `<div>
+                     Tuz Gölü
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c74b5f8b7b2665b3f72414254cce26ba = L.marker(
+                [38.875, 33.35],
+                {
+}
+            ).addTo(map_b09bf2783e05b965bccb89b2cc274754);
+        
+    
+            var div_icon_73e320b4a3e21f8411f9835fc4d39580 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-size: 11pt; color: black; font-weight: bold;\n                        text-shadow: 1px 1px 3px white, -1px -1px 3px white;\"\u003e\n                Tuz G\u00f6l\u00fc\n            \u003c/div\u003e\n        ",
+  "className": "empty",
+});
+        
+    
+                marker_c74b5f8b7b2665b3f72414254cce26ba.setIcon(div_icon_73e320b4a3e21f8411f9835fc4d39580);
+            
+    
+            var circle_marker_d63b99f7f426e4b715bb282339f4091c = L.circleMarker(
+                [37.75, 30.175],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_b09bf2783e05b965bccb89b2cc274754);
+        
+    
+        var popup_81069c4567d08f1426cbe607819d35b2 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_bee0108285517e33286e996cc8999b30 = $(`<div id="html_bee0108285517e33286e996cc8999b30" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 220px;">         <h4 style="margin: 0; color: #2c3e50;">Burdur Gölü</h4>         <hr style="margin: 5px 0;">         <b>2024 Su Alanı:</b> 116.9 km²<br>         <b>2050 RCP 8.5:</b> 76.8 km²<br>         <b>Değişim:</b> <span style="color: red; font-weight: bold;">         -34.3%</span>     </div>     </div>`)[0];
+                popup_81069c4567d08f1426cbe607819d35b2.setContent(html_bee0108285517e33286e996cc8999b30);
+            
+        
+
+        circle_marker_d63b99f7f426e4b715bb282339f4091c.bindPopup(popup_81069c4567d08f1426cbe607819d35b2)
+        ;
+
+        
+    
+    
+            circle_marker_d63b99f7f426e4b715bb282339f4091c.bindTooltip(
+                `<div>
+                     Burdur Gölü
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e95d2a9414f2339e6fdada20e777f136 = L.marker(
+                [37.9, 30.175],
+                {
+}
+            ).addTo(map_b09bf2783e05b965bccb89b2cc274754);
+        
+    
+            var div_icon_5735fc92afd2b3f0c6099ad0accd30ae = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-size: 11pt; color: black; font-weight: bold;\n                        text-shadow: 1px 1px 3px white, -1px -1px 3px white;\"\u003e\n                Burdur G\u00f6l\u00fc\n            \u003c/div\u003e\n        ",
+  "className": "empty",
+});
+        
+    
+                marker_e95d2a9414f2339e6fdada20e777f136.setIcon(div_icon_5735fc92afd2b3f0c6099ad0accd30ae);
+            
+    
+            var circle_marker_ac38c17f634317204dcb369d5513011b = L.circleMarker(
+                [37.8, 31.575000000000003],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_b09bf2783e05b965bccb89b2cc274754);
+        
+    
+        var popup_b6cc5f0fd3ec853f6ce19f7ae12b6ad8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_44857fbf9c153fd0a5f052403d39326d = $(`<div id="html_44857fbf9c153fd0a5f052403d39326d" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 220px;">         <h4 style="margin: 0; color: #2c3e50;">Beyşehir Gölü</h4>         <hr style="margin: 5px 0;">         <b>2024 Su Alanı:</b> 558.9 km²<br>         <b>2050 RCP 8.5:</b> 558.2 km²<br>         <b>Değişim:</b> <span style="color: red; font-weight: bold;">         -0.1%</span>     </div>     </div>`)[0];
+                popup_b6cc5f0fd3ec853f6ce19f7ae12b6ad8.setContent(html_44857fbf9c153fd0a5f052403d39326d);
+            
+        
+
+        circle_marker_ac38c17f634317204dcb369d5513011b.bindPopup(popup_b6cc5f0fd3ec853f6ce19f7ae12b6ad8)
+        ;
+
+        
+    
+    
+            circle_marker_ac38c17f634317204dcb369d5513011b.bindTooltip(
+                `<div>
+                     Beyşehir Gölü
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b5e7297c0f19cc626735cf47c0138774 = L.marker(
+                [37.949999999999996, 31.575000000000003],
+                {
+}
+            ).addTo(map_b09bf2783e05b965bccb89b2cc274754);
+        
+    
+            var div_icon_ea3ac884115a0c2ab2550361ff375aa7 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-size: 11pt; color: black; font-weight: bold;\n                        text-shadow: 1px 1px 3px white, -1px -1px 3px white;\"\u003e\n                Bey\u015fehir G\u00f6l\u00fc\n            \u003c/div\u003e\n        ",
+  "className": "empty",
+});
+        
+    
+                marker_b5e7297c0f19cc626735cf47c0138774.setIcon(div_icon_ea3ac884115a0c2ab2550361ff375aa7);
+            
+    
+            var circle_marker_a32da5ceb45e61824ab4d9903e0bf75d = L.circleMarker(
+                [37.55, 29.7],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_b09bf2783e05b965bccb89b2cc274754);
+        
+    
+        var popup_e8c644207b8826045163f06fbdb43318 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_976b5d03c6b52272e84d6d3c1f992d68 = $(`<div id="html_976b5d03c6b52272e84d6d3c1f992d68" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 220px;">         <h4 style="margin: 0; color: #2c3e50;">Salda Gölü</h4>         <hr style="margin: 5px 0;">         <b>2024 Su Alanı:</b> 38.6 km²<br>         <b>2050 RCP 8.5:</b> 38.4 km²<br>         <b>Değişim:</b> <span style="color: red; font-weight: bold;">         -0.4%</span>     </div>     </div>`)[0];
+                popup_e8c644207b8826045163f06fbdb43318.setContent(html_976b5d03c6b52272e84d6d3c1f992d68);
+            
+        
+
+        circle_marker_a32da5ceb45e61824ab4d9903e0bf75d.bindPopup(popup_e8c644207b8826045163f06fbdb43318)
+        ;
+
+        
+    
+    
+            circle_marker_a32da5ceb45e61824ab4d9903e0bf75d.bindTooltip(
+                `<div>
+                     Salda Gölü
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0308f9d32cfaed1a8c2c63d72dfd9e4e = L.marker(
+                [37.699999999999996, 29.7],
+                {
+}
+            ).addTo(map_b09bf2783e05b965bccb89b2cc274754);
+        
+    
+            var div_icon_4aa1974308d6607f228e2d6236c2a516 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-size: 11pt; color: black; font-weight: bold;\n                        text-shadow: 1px 1px 3px white, -1px -1px 3px white;\"\u003e\n                Salda G\u00f6l\u00fc\n            \u003c/div\u003e\n        ",
+  "className": "empty",
+});
+        
+    
+                marker_0308f9d32cfaed1a8c2c63d72dfd9e4e.setIcon(div_icon_4aa1974308d6607f228e2d6236c2a516);
+            
+</script>
+</html>

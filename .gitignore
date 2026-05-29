@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# Large data/model files
+*.tif
+*.tiff
+*.nc
+*.h5
+*.pth
+*.pt
+*.ckpt
+models/*.pth
+models/*.pt
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
+
+# Temporary outputs
+outputs/tmp/
+data/raw/
